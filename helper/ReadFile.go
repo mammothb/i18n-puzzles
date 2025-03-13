@@ -14,7 +14,7 @@ func ReadLine(filename string) iter.Seq[string] {
 	if !ok {
 		log.Fatal("Cannot find Caller of helper.ReadLine")
 	}
-	f, err := os.Open(path.Join(path.Dir(path.Dir(callerPath)), filename))
+	f, err := os.Open(path.Join(path.Dir(path.Dir(callerPath)), "data", filename))
 	if err != nil {
 		log.Fatal(err)
 	}
